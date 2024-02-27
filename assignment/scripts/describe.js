@@ -26,9 +26,9 @@ if (number >= 2) {
 
 
 // 1. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
+// First we create a variable "name" and set it to the string "Dane".
+// Then we check if the name equals "Mary". The condition is false so
+// the console log displays "How do you do?"
 //
 
 //CODE
@@ -45,10 +45,12 @@ if (name === 'Mary') {
 */
 
 // 2. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We declare two variables, secret and code. Secret is not assigned a value, but code is set to the number 123.
+// Then we check if the code is 123. The condition is true so we assign the string 'super' to the 'secret' variable
+// and multiply the code by 2. Code is now 246.
+// Now there's a second condition. Since code is not greater than 250 (It's only 246), the condition is false so we do not change
+// the secret variable.
+// The console log should show "super".
 
 //CODE
 /*
@@ -70,10 +72,16 @@ console.log(secret)
 */
 
 // 3. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// First we declare 3 variables: isStudent is assigned the boolean true, age is assigned the number 34 and zip is assigned 55407.
+// (Side note: Ideally that should be assigned as a text string because even though it is numeric we don't typically perform 
+// calculations with it.
+// The zip code is typically used as an identifier; but that's getting into database design.)
+// However, in this case we check if isStudent is true and the zip code is greater than 80000. This condition is false because although
+// isStudent equals true, the zip code is not greater than 80000, so we move to
+// the next conditional clause. We check if isStudent is false OR the age is under 30.
+// This condition is false as well because neither option is true.
+// Since isStudent is true, we console log "Welcome to Prime!". The statement to console log about the weather is not used because we
+// the previous condition is true and the execution stopped.
 
 //CODE
 /*
@@ -135,6 +143,7 @@ let colorTwo = 'blue';
 let mix = true;
 
 if (mix === true) {
+  // FIX - colorTwo is not modified. Add "colorTwo = 'purple';" to the code block
   colorOne = 'purple';
 }
 */
@@ -146,6 +155,10 @@ if (mix === true) {
 /*
 let temp = 40;
 const time = 4;
+
+// FIX - the condition used in this statement is OR (||) which will evaluate as true even if only one condition is met. In this instance
+// it would still evaluate to true, but other values may not. The correct operator should be && which only evaluates as true if 
+// both conditions are met.
 
 if (temp > 39 || time >= 4) {
   console.log('throw away the food!');
@@ -159,6 +172,12 @@ if (temp > 39 || time >= 4) {
 /*
 let age = 21;
 const minAge = 21;
+
+// FIX - The code isn't as clear as it could be. The comparison used here is less than or equal to (<=). minAge is actually less than or
+// equal to age, but the description states 'age is greater than or equal to minAge'. 
+// To ensure it is performing the correct comparison, use >= instead. I would rewrite this as age >= minAge.
+// Also, the code as written would log "no entry" because the condition evaluates true. 'no entry' should be in the else block and
+// 'enter' should be in the block that executes when the condition is true.
 
 if(minAge <= age) {
   console.log('no entry');
